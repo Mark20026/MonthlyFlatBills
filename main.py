@@ -1,3 +1,5 @@
+import webbrowser
+
 from fpdf import FPDF
 
 
@@ -121,11 +123,13 @@ class GeneratePaymentPDF:
         pdf.set_font("Arial", size=12)
         for flatmate in flatmates:
             pdf.cell(100, 10, f"Flatmate: {flatmate.name}", ln=True)
-            pdf.cell(100, 10, f"Amount to pay: {flatmate.pays(flatmates, bill):.2f}", ln=True)
+            pdf.cell(100, 10, f"Amount to pay: {flatmate.pays(flatmates, bill):.2f}$", ln=True)
             pdf.ln(5)
 
         # Save the PDF to the specified filename
         pdf.output(self.filename)
+
+        webbrowser.open(self.filename)
 
 
 bill_amount = float(input("How much is the bill?: "))
