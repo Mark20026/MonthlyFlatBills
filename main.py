@@ -19,7 +19,7 @@ bill = Bill(bill_amount, period_year, period_month)
 
 bill.days_in_period(period_month)
 
-pdf_of_payment = GeneratePaymentPDF("bill_report.pdf")
+pdf_of_payment = GeneratePaymentPDF(filename=f"{bill.month + ' ' + bill.year}.pdf")
 print("The bill of the payments is printing")
 print(".")
 print("..")
