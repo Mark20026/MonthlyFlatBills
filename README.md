@@ -20,3 +20,7 @@ This script calculates the amount each flatmate has to pay based on the bill amo
 - Month and Year: Enter the month and year in the format "Month Year" (e.g., August 2023).
 - Number of People: Enter the total number of people living in the flat.
 - Flatmate Details: For each flatmate, enter their name and the number of days they stayed
+
+## Output
+
+The script calculates the amount each flatmate has to pay and generates a PDF report with the details.
