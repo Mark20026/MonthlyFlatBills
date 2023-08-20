@@ -1,4 +1,5 @@
 import webbrowser
+import os
 
 from fpdf import FPDF
 
@@ -46,6 +47,8 @@ class GeneratePaymentPDF:
             pdf.ln(5)
 
         # Save the PDF to the specified filename
+        os.chdir("bills")
+
         pdf.output(self.filename)
 
         webbrowser.open(self.filename)
